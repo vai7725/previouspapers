@@ -1,3 +1,13 @@
+/* Commands to push new project on github */
+
+git init
+git add . (this will get all the files ready to push)
+git commit -m "commit" 
+git git remote add origin `github repository link`
+git push origin "branch"
+
+
+/* Commands to push changes on github */
 git add .
 git commit -m "Commit here"
 git push origin master
