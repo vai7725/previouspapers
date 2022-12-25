@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Previous Year Papers</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="imgs/logo.png" alt="logo" id="logo-img" />
+      </div>
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="">Papers</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="landing-section">
+        <div class="text">
+          <p>
+            Download and <br />
+            prepare for your exams.
+          </p>
+          <a href="#un-sec" class="landing-page-btn gtpBtn">Go to papers</a>
+        </div>
+        <div class="landing-img-box">
+          <img src="imgs/landing img.png" alt="Image" class="landing-img" />
+        </div>
+      </section>
+    </main>
+    <hr />
+    <section id="un-sec" class="university-section">
+      <h1>Select University</h1>
+      <div class="card-box un-card-box">
+        <div class="card-cover">
+          <div class="card">
+            <img
+              src="https://images.edexlive.com/uploads/user/imagelibrary/2020/9/9/original/15088382431447149306MDSUNEW.jpg"
+              alt="University Image"
+            />
+            <h4>Maharshi Dayananda Saraswati University</h4>
+            <p>
+              Maharshi Dayanand Saraswati University Ajmer is a prominent
+              affiliating university in the state of Rajasthan. Established on
+              August 1, 1987...
+            </p>
+            <a href="/courses">Select</a>
+          </div>
+          
+
+        <div class="more-btn-div">
+          <a href="" class="more-card-btn"
+            >More <span><i class="fa-solid fa-arrow-right-long"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section id="contact-section" class="contact-section">
+      <h1>Contact For any query</h1>
+      <form action="" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" class="form-inp" />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@abc.com"
+          class="form-inp"
+        />
+        <label for="university">Enter your university name:</label>
+        <input type="text" name="university" id="university" class="form-inp" />
+        <label for="msg">Message:</label>
+        <textarea
+          name="msg"
+          id="msg"
+          cols="30"
+          rows="10"
+          class="form-inp"
+        ></textarea>
+        <button class="form-btn">Submit</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy;all rights reserved for <span class="copyright-year"></span></p>
+      <p class="note">
+        Currently we are only providing papers for selected universities.
+      </p>
+    </footer>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>

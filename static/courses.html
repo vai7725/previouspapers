@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/courses.css" />
+    <title>Download | Previous Papers</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">Previous papers</nav>
+    </header>
+    <main>
+      <section class="main-section">
+        <div class="card-box">
+          <!-- -------------'Select course' option ---------------- -->
+          <div class="selection-card">
+            <div class="card-img">
+              <i class="fa-solid fa-graduation-cap fa-5x card-icon"></i>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <span>Select Course</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div id="courseOpts" class="dropdown-content courseCardOpts">
+                <a href="/courses/options/api/B.Sc B.Ed">B.Sc B.Ed</a>
+                <a href="/courses/options/api/B.A B.Ed">B.A B.Ed</a>
+              </div>
+            </div>
+          </div>
+          <!-- -------------'Select course Year' option ---------------- -->
+          <div class="selection-card">
+            <div class="card-img">
+              <i class="fa-regular fa-calendar fa-5x card-icon"></i>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn courseYearOptBtn">
+                <span>Select Course Year</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div id="courseYrOpts" class="dropdown-content">
+                <a href="#" class="alertOpt" style="color: red; font-size: 70%"
+                  >Select previous option first</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- -------------'Select Subject' option ---------------- -->
+          <div class="selection-card">
+            <div class="card-img">
+              <i class="fa-solid fa-book fa-5x card-icon"></i>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn subjectOptBtn">
+                <span>Select Subject</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div id="subOpts" class="dropdown-content">
+                <a href="#" class="alertOpt" style="color: red; font-size: 70%"
+                  >Select previous option first</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <!-- -------------'Select Paper Year' option ---------------- -->
+          <div class="selection-card">
+            <div class="card-img">
+              <i class="fa-solid fa-calendar-days fa-5x card-icon"></i>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn paperYrBtn">
+                <span>Select Paper Year</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div id="paperYearOpt" class="dropdown-content">
+                <a href="#" class="alertOpt" style="color: red; font-size: 70%"
+                  >Select previous option first</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- -------------Download Button ---------------- -->
+          <div class="selection-card">
+            <div class="card-img">
+              <i class="fa-regular fa-file-pdf fa-5x card-icon"></i>
+            </div>
+            <a href="#" class="dropbtnDownload" id="downloadBtn">
+              <span>Download</span>
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="note">
+        Currently we are only providing papers for selected courses.
+      </p>
+    </footer>
+
+    <script src="/js/courses.js"></script>
+  </body>
+</html>

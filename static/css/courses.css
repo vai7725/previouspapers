@@ -1,0 +1,228 @@
+:root {
+  --accentCol: rgb(116, 192, 255);
+}
+
+.limited-content::-webkit-scrollbar {
+  border-radius: 8px;
+}
+.limited-content::-webkit-scrollbar-track:active {
+  background-color: lightgray;
+  border-radius: 8px;
+}
+.limited-content::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 4px;
+}
+.limited-content::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+/* ===============
+    main section styles
+    =============== */
+
+main {
+  height: fit-content;
+}
+
+.main-section {
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-bottom: 0.5rem;
+  width: 80%;
+  height: fit-content;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* card-box style */
+.card-box {
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 35vh;
+  justify-content: space-around;
+}
+
+/* card styles */
+.selection-card {
+  background-color: var(--accentCol);
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px black;
+  padding: 0.5rem;
+  width: 25%;
+  height: 100%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0.5rem;
+}
+
+.card-img {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon {
+  color: rgb(8, 0, 77);
+}
+
+.selection-card select {
+  border: none;
+  outline: none;
+  padding: 0.13rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px;
+}
+
+.selection-card select:active {
+  box-shadow: none;
+}
+
+.dropdown {
+  width: 100%;
+  /* position: absolute; */
+  position: relative;
+}
+.dropbtn,
+.dropbtnDownload {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.125rem;
+  box-shadow: 1px 1px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  opacity: 95%;
+}
+.dropbtnDownload {
+  background-color: white;
+  color: black;
+  padding: 0 0.125rem;
+  text-decoration: none;
+}
+.dropbtnDownload:hover {
+  text-decoration: underline;
+}
+.dropbtn:active,
+.dropbtnDownload:active {
+  box-shadow: none;
+}
+.dropbtn:hover,
+.dropbtnDownload:hover {
+  opacity: 100%;
+}
+.dropdown-content {
+  margin: 0.5px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  width: 97%;
+}
+.limited-content {
+  padding: 0.125rem;
+  height: 600%;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px black;
+}
+.dropdown-content a {
+  color: black;
+  background-color: white;
+  opacity: 90%;
+  /* border: 1px solid; */
+  text-decoration: none;
+  margin: 0.5px;
+  padding: 0 8px;
+  border-radius: 6px;
+  box-shadow: 0.5px 0.5px 2px black;
+  z-index: 1;
+  font-size: 0.8rem;
+}
+.dropdown-content a:hover {
+  background-color: var(--accentCol);
+}
+.dropdown-content a:hover {
+  opacity: 100%;
+}
+.showOptions {
+  display: flex;
+}
+
+@media screen and (max-width: 1140px) {
+  .card-box {
+    display: flex;
+    height: fit-content;
+    /* border: 2px solid black; */
+  }
+  .selection-card {
+    height: 30vh;
+    /* border: 2px solid black; */
+    width: 50%;
+    max-width: 300px;
+  }
+  .main-section {
+    /* min-height: 100vh; */
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-section {
+    justify-content: flex-start;
+  }
+  .card-box {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+}
+
+.download-btn {
+  background-color: var(--accentCol);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px;
+  width: 20%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.unclickable {
+  pointer-events: none;
+}
+.download-btn:active {
+  box-shadow: none;
+}
+.download-btn:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .main-section {
+    width: 100%;
+  }
+  .selection-card {
+    width: 80%;
+    height: 30vh;
+  }
+  .download-btn {
+    width: fit-content;
+  }
+}
+
+footer {
+  margin-top: 0.5rem;
+}

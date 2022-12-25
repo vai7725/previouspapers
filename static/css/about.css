@@ -1,0 +1,22 @@
+.navbar {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.about {
+  /* border: 2px solid black; */
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.about p {
+  /* border: 2px solid red; */
+  padding: 0 2rem;
+}
+
+.about ul {
+  padding: 0 4rem;
+}
