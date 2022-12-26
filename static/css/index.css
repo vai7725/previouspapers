@@ -309,60 +309,114 @@ main {
 
 /* styling of contact section */
 .contact-section {
-  padding: 0.5rem;
-  /* border: 2px solid black; */
+  /* border: 2px solid red; */
+  padding: 1rem;
   width: 80%;
   margin: auto;
-  /* min-height: 600px; */
-  height: fit-content;
+  height: 85vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
+}
+.contact-intro {
+  text-align: center;
+}
+.contact-intro p {
+  font-size: 0.7rem;
 }
 .contact-section > h1 {
   font-size: 2rem;
+  border: 2px solid black;
 }
 
 .contact-form {
+  border: 1px solid var(--accentCol);
   text-align: left;
   max-width: 800px;
-  width: 90%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  min-width: 40%;
-  background-color: whitesmoke;
   border-radius: 6px;
+  justify-content: space-evenly;
+  height: 100%;
+  box-shadow: 1px 1px 3px black;
 }
 
+@media screen and (max-width: 950px) {
+  .contact-form {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 480px) {
   .contact-section {
     width: 100%;
   }
+  .contact-form {
+    width: 90%;
+  }
 }
 
 .form-btn {
-  margin: 0.3em auto;
-  padding: 0.3em 3em;
-  background-color: var(--accentCol);
-  border: none;
+  border: 2px solid var(--accentCol);
+  background-color: rgb(230, 244, 255);
   border-radius: 6px;
-  box-shadow: 2px 2px 8px black;
   cursor: pointer;
-  font-weight: bold;
+  width: 100%;
+  height: 7%;
+  font-size: 1rem;
+  transition: all 300ms ease-in;
+}
+.serverMsg {
+  font-size: 0.7rem;
+  text-align: center;
+  color: green;
+}
+
+.redTxt {
+  color: red;
 }
 
 .form-btn:active {
-  box-shadow: none;
+  border: none;
+  background-color: var(--accentCol);
+}
+
+.form-inp-div {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  width: 100%;
+  height: 7%;
+  border-radius: 6px;
+}
+
+.textarea-div {
+  height: 45%;
+  align-items: flex-start;
+  padding: 0.25rem 0.4rem;
+}
+
+.inp-textarea {
+  resize: none;
+}
+
+.form-icon-span {
+  width: 10%;
+  align-items: center;
+  color: rgb(8, 0, 77);
 }
 
 .form-inp {
-  border: 1px solid black;
+  border: none;
   outline: none;
-  padding: 0.5em 1em;
   border-radius: 6px;
+  width: 90%;
+  height: 100%;
 }
 
 footer {

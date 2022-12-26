@@ -66,39 +66,79 @@
       </div>
     </section>
     <hr />
+
+    <!-- contact form ----------------------------------------------------- -->
+
     <section id="contact-section" class="contact-section">
-      <h1>Contact For any query</h1>
-      <form action="" class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" class="form-inp" />
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="example@abc.com"
-          class="form-inp"
-        />
-        <label for="university">Enter your university name:</label>
-        <input type="text" name="university" id="university" class="form-inp" />
-        <label for="msg">Message:</label>
-        <textarea
-          name="msg"
-          id="msg"
-          cols="30"
-          rows="10"
-          class="form-inp"
-        ></textarea>
-        <button class="form-btn">Submit</button>
+      <form action="/contact" method="post" class="contact-form">
+        <div class="contact-intro">
+          <h1>Want to connect?</h1>
+          <p>Got any problem realted to papers or website? Get in touch with us and we'll reply as soon as possible</p>
+        </div>
+        <div class="name-form form-inp-div">
+          <span class="form-icon-span">
+            <i class="fa-solid fa-user fa-lg  "></i>
+          </span>
+          <input 
+            type="text" 
+            name="name" 
+            id="form-name" 
+            class="form-inp" 
+            placeholder="Enter your name" 
+              
+          />
+        </div>
+        <div class="form-inp-div">
+          <span class="form-icon-span">
+            <i class="fa-solid fa-envelope fa-lg  "></i>
+          </span>
+          <input
+            type="email"
+            name="email"
+            id="form-email"
+            placeholder="example@abc.com"
+            class="form-inp"
+             
+          />
+        </div>
+        <div class="form-inp-div">
+          <span class="form-icon-span">
+            <i class="fa-solid fa-graduation-cap fa-lg  "></i>
+          </span>
+          <input 
+            type="text" 
+            name="university" 
+            id="form-university" 
+            class="form-inp" 
+            placeholder="Enter your university name" 
+              />
+        </div>
+        <div class="form-inp-div textarea-div">
+          <span class="form-icon-span">
+            <i class="fa-solid fa-message fa-lg  "></i>
+          </span>
+          <textarea
+            name="msg"
+            id="form-msg"
+            cols="30"
+            rows="10"
+            class="form-inp inp-textarea"
+            placeholder="Enter your message"
+             
+          ></textarea>
+        </div>
+        <button type="submit" class="form-btn">Submit</button>
+        <p class="serverMsg"></p>
       </form>
     </section>
     <footer>
-      <p>&copy;all rights reserved for <span class="copyright-year"></span></p>
+      <p>&copy; All rights reserved for <span class="copyright-year"></span></p>
       <p class="note">
         Currently we are only providing papers for selected universities.
       </p>
     </footer>
 
     <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
   </body>
 </html>
