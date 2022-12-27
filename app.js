@@ -14,6 +14,7 @@ const connectDB = require("./db/connect");
 const options = require("./model/options");
 const papers = require("./model/paper");
 const contactData = require("./model/contactData");
+const userCount = require("./model/userCount");
 
 const app = express();
 const router = express.Router();
@@ -46,6 +47,35 @@ app.post("/contact", async (req, res) => {
     .catch((err) => {
       res.status(400).json({ msg: "Please provide correct credentials" });
     });
+});
+
+// app.post("/usercount", async (req, res) => {
+//   const data = await userCount({ userVisiting: true, userCount: 0 });
+//   console.log(data);
+//   data
+//     .save()
+//     .then(() => {
+//       res.send("usercount made");
+//     })
+//     .catch((err) => console.log(err));
+// });
+
+app.put("/usercount/:userCount", async (req, res) => {
+  const filter = { userVisiting: true };
+  const update = req.params;
+  console.log(update);
+  const data = await userCount.findOneAndUpdate(filter, update, {
+    new: true,
+  });
+});
+
+app.get("/usercount", async (req, res) => {
+  try {
+    const data = await userCount.find();
+    res.status(200).json(data);
+  } catch (error) {
+    console.log(error.message);
+  }
 });
 
 app.get("/courses/options/api/:coursename", async (req, res) => {

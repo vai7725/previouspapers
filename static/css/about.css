@@ -3,6 +3,22 @@
   font-size: 1.5rem;
 }
 
+.about-home-navigator {
+  position: fixed;
+  left: 5%;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding: 0.12rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 200ms ease-in;
+}
+
+.about-home-navigator:hover {
+  background-color: white;
+}
+
 main {
   height: 100vh;
 }
@@ -60,5 +76,8 @@ main {
   }
   .content {
     margin: 1rem 0;
+  }
+  .about-home-navigator {
+    left: 2%;
   }
 }

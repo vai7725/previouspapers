@@ -15,6 +15,65 @@ html {
   --accentCol: rgb(116, 192, 255);
 }
 
+.welcome-popup-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* opacity: 0.7; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-popup {
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px black;
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid var(--accentCol);
+}
+
+.interactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* border: 2px solid green; */
+  height: 80%;
+}
+
+.interactions h1 {
+  width: 100%;
+  /* border-bottom: 2px solid var(--accentCol); */
+  background-color: rgb(230, 244, 255);
+  border-radius: 6px;
+}
+
+.welcome-btn {
+  border: 2px solid var(--accentCol);
+  background-color: rgb(230, 244, 255);
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  height: 10%;
+  font-size: 1rem;
+  transition: all 300ms ease-in;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
 .navbar {
   z-index: +2;
   padding: 5px;
@@ -131,7 +190,7 @@ main {
   background-color: var(--accentCol);
   border: none;
   border-radius: 6px;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 1px 1px 2px black;
   cursor: pointer;
   font-size: 1.125rem;
   padding: 5px 10px;
@@ -141,9 +200,6 @@ main {
 
 .landing-page-btn:active {
   box-shadow: none;
-}
-.landing-page-btn:hover {
-  text-decoration: underline;
 }
 
 .gtpBtn > a {
@@ -222,12 +278,12 @@ main {
   background-color: var(--accentCol);
   width: 95%;
   height: fit-content;
-  padding: 0.5rem;
+  padding: 0.3rem;
   text-align: center;
   color: black;
   text-decoration: none;
   border-radius: 6px;
-  box-shadow: 1px 1px 4px black;
+  box-shadow: 1px 1px 2px black;
 }
 
 .card a:active {
